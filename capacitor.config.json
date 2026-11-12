@@ -1,0 +1,9 @@
+{
+  "appId": "cz.terkyspider.app",
+  "appName": "Terky Spider",
+  "webDir": "dist",
+  "backgroundColor": "#0b552e",
+  "ios": {
+    "contentInset": "never"
+  }
+}

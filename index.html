@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0b552e" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Terky Spider</title>
+  </head>
+  <body>
+    <div id="app">
+      <header id="hud">
+        <div class="stat"><span data-i18n="score"></span><b id="hud-score">500</b></div>
+        <div class="stat"><span data-i18n="moves"></span><b id="hud-moves">0</b></div>
+        <div class="stat"><span data-i18n="time"></span><b id="hud-time">0:00</b></div>
+      </header>
+      <main id="board"></main>
+      <footer id="toolbar">
+        <button id="btn-new" data-i18n="settings"></button>
+        <button id="btn-undo" data-i18n="undo"></button>
+        <button id="btn-hint"><span data-i18n="hint"></span><span id="hint-count" class="badge"></span></button>
+      </footer>
+    </div>
+    <div id="toast" role="status"></div>
+    <div id="modal" class="hidden">
+      <div class="sheet" role="dialog" aria-modal="true">
+        <h2 id="modal-title"></h2>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

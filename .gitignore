@@ -1,0 +1,7 @@
+.DS_Store
+android/local.properties
+dist/
+ios/build/
+node_modules/
+src/assets/vyhra/
+store/screenshots/

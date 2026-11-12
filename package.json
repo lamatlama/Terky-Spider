@@ -1,0 +1,40 @@
+{
+  "name": "spider-solitaire",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test",
+    "sync": "npm run build && cap sync",
+    "ios": "npm run build && cap sync ios && cap open ios",
+    "android": "npm run build && cap sync android && cap open android",
+    "assets": "node scripts/make-assets.mjs && capacitor-assets generate --ios --android",
+    "assets:generate": "capacitor-assets generate --ios --android",
+    "predev": "node scripts/prepare-photos.mjs",
+    "prebuild": "node scripts/prepare-photos.mjs",
+    "store:texts": "node scripts/store-texts.mjs",
+    "store:shots": "node scripts/store-screenshots.mjs",
+    "store:graphics": "node scripts/store-graphics.mjs"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^4.0.0",
+    "@capacitor/cli": "^8.6.0",
+    "playwright-core": "^1.65.0",
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/core": "^8.6.0",
+    "@capacitor/filesystem": "^8.1.5",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/ios": "^8.6.0",
+    "@capacitor/preferences": "^8.0.1",
+    "@capacitor/share": "^8.0.3",
+    "@capacitor/status-bar": "^8.0.4",
+    "@capgo/native-purchases": "^8.9.10"
+  }
+}

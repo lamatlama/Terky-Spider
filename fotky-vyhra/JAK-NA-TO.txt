@@ -1,0 +1,19 @@
+Fotky, které se ukazují po výhře
+================================
+
+Sem dej libovolné fotky (JPG, PNG nebo WebP, jakákoli velikost).
+Po každé výhře se ukáže další fotka v pořadí podle názvu souboru,
+po poslední se začne znovu od první. Hra si pamatuje, kde skončila.
+
+- Pořadí určíš názvem: 01-terka.jpg, 02-..., 03-...
+- Fotky se při sestavení samy oříznou na čtverec (podle obličeje)
+  a zmenší, takže aplikace kvůli nim nenaroste.
+- Když se výřez nepovede (useknutá hlava…), dolaď ho ve vyrez.json:
+    "02-mojefotka.jpg": { "x": 50, "y": 20, "zoom": 1 }
+  x/y = poloha čtverce v procentech (0 = vlevo/nahoře, 50 = střed,
+  100 = vpravo/dole), zoom = přiblížení (1 = bez přiblížení, 1.5 = víc).
+  Fotky, které tam nejsou, se oříznou automaticky podle obličeje.
+- Po přidání fotky spusť `npm run sync` (nebo `npm run dev` pro prohlížeč).
+- Text pod fotkou („Jsi borec! Terka je na tebe hrdá!“) se mění
+  v src/i18n.js u klíčů `won` a `proud`.
+- Když tu nebude žádná fotka, ukáže se jen text.

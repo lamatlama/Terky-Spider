@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Terky Spider</string>
+    <string name="title_activity_main">Terky Spider</string>
+    <string name="package_name">cz.terkyspider.app</string>
+    <string name="custom_url_scheme">cz.terkyspider.app</string>
+</resources>
