@@ -5,7 +5,6 @@ Všechny podklady jsou v této složce `store/`:
 | Co | Soubor |
 | --- | --- |
 | Texty (název, popis, klíčová slova…) v 10 jazycích | `texty-do-obchodu.md` |
-| Zásady ochrany soukromí (webová stránka) | `privacy/index.html` |
 | Snímky iPhone 6,9" (1320×2868) | `screenshots/iphone-6.9/cs` a `/en` |
 | Snímky iPad 13" (2064×2752) | `screenshots/ipad-13/cs` a `/en` |
 | Snímky Android (1080×2160) | `screenshots/android/cs` a `/en` |
@@ -16,14 +15,15 @@ Snímky nahrávej v pořadí podle čísla v názvu (01 → 05). Pro ostatní ja
 obchody použijí snímky hlavního jazyka. Další jazyky: `LANGS=de,fr npm run store:shots`
 (potřebuje běžící `npm run dev`; adresu dej do `SPIDER_URL`).
 
-## Než začneš
+## Adresy pro obchody
 
-1. **Zásady ochrany soukromí musí být na veřejné adrese.** V `privacy/index.html`
-   doplň `[JMÉNO VÝVOJÁŘE]` a `[KONTAKTNÍ E-MAIL]` (česky i anglicky) a stránku
-   zveřejni – např. zdarma přes GitHub Pages, Google Sites nebo na vlastním webu.
-   Adresu pak vložíš do obou obchodů.
-2. **Podpůrná adresa (Support URL)** – Apple ji vyžaduje. Stačí stejná stránka
-   nebo jakákoli stránka s kontaktem.
+Zásady ochrany soukromí a stránka s kontaktem jsou na společném webu pro všechny
+aplikace (projekt `Projects/aplikace-web`, repozitář `lamatlama.github.io`):
+
+- **Privacy Policy URL:** https://lamatlama.github.io/terky-spider/privacy/
+- **Support URL** (jen Apple): https://lamatlama.github.io/terky-spider/
+
+Změny textu zásad se dělají tam (`aplikace.mjs`), ne v tomto projektu.
 
 ## App Store Connect
 
@@ -37,7 +37,7 @@ obchody použijí snímky hlavního jazyka. Další jazyky: `LANGS=de,fr npm run
 **Pricing and Availability**: aplikace **Free** (platí se až nákup v aplikaci).
 
 **App Privacy** → Data Collection: **„No, we do not collect data from this app“**.
-Privacy Policy URL: adresa zveřejněné stránky.
+Privacy Policy URL: https://lamatlama.github.io/terky-spider/privacy/
 
 **In-App Purchases** (až bude aktivní smlouva Paid Apps)
 - Type: **Non-Consumable**
@@ -49,8 +49,8 @@ Privacy Policy URL: adresa zveřejněné stránky.
 - Review screenshot: `screenshots/iphone-6.9/cs/05-nastaveni.png` nebo snímek obrazovky s nabídkou
 - Při odeslání první verze ke schválení nákup u verze zaškrtni.
 
-**Verze 1.0**: snímky, Promotional Text, Description, Keywords, Support URL
-z `texty-do-obchodu.md`. Build nahraješ z Xcode (Product → Archive → Distribute App).
+**Verze 1.0**: snímky, Promotional Text, Description, Keywords z `texty-do-obchodu.md`,
+Support URL https://lamatlama.github.io/terky-spider/. Build nahraješ z Xcode (Product → Archive → Distribute App).
 
 **App Review Information → Notes** (pro kontrolora, anglicky):
 
@@ -71,7 +71,7 @@ ikona 512, banner (Feature graphic), snímky telefonu. Snímky tabletu nejsou po
 (můžeš použít ty z iPadu). Překlady: Spravovat překlady → přidat jazyk.
 
 **Obsah aplikace** (povinné dotazníky):
-- Zásady ochrany soukromí: adresa stránky
+- Zásady ochrany soukromí: https://lamatlama.github.io/terky-spider/privacy/
 - Reklamy: **Ne, aplikace neobsahuje reklamy**
 - Přístup k aplikaci: **Všechny funkce jsou dostupné bez omezení** (bez přihlášení)
 - Hodnocení obsahu: kategorie **Hra** → na všechno **Ne** (žádné násilí, hazard o

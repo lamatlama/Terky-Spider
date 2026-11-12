@@ -41,7 +41,7 @@ aplikace (HTML/CSS/JavaScript) a do nativní aplikace ji balí
 | `src/theme.js` | vlastní fotka na kartách, posílání a příjem souboru karet |
 | `fotky-vyhra/` | fotky po výhře (zmenší se samy při sestavení) |
 | `src/purchase.js` | 3 hry zdarma a nákup plné verze |
-| `store/` | podklady pro obchody: texty, snímky, grafika, zásady soukromí, návod `store/JAK-NAHRAT.md` |
+| `store/` | podklady pro obchody: texty, snímky, grafika, návod `store/JAK-NAHRAT.md` (zásady soukromí jsou na společném webu `Projects/aplikace-web`) |
 | `src/crop.js` | výpočty výřezu fotky (pokryto testy) |
 | `assets/` | ikona a úvodní obrazovka (zdroj pro obě platformy) |
 | `ios/`, `android/` | nativní projekty (Xcode, Android Studio) |
