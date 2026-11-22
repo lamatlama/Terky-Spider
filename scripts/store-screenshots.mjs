@@ -13,7 +13,7 @@ const PHOTO = 'fotky-vyhra/01-terka.jpg'; // fotka pro ukázku „vlastní fotka
 
 // rozměry, které obchody vyžadují
 const DEVICES = {
-  'iphone-6.9': { viewport: { width: 440, height: 956 }, scale: 3, mobile: true }, // 1320×2868 – App Store, povinné
+  'iphone-6.3': { viewport: { width: 402, height: 874 }, scale: 3, mobile: true }, // 1206×2622 – App Store „iPhone with Dynamic Island (medium display)“, povinné
   'ipad-13': { viewport: { width: 1032, height: 1376 }, scale: 2, mobile: true }, // 2064×2752 – App Store, povinné (hra běží i na iPadu)
   android: { viewport: { width: 360, height: 720 }, scale: 3, mobile: true }, // 1080×2160 – Google Play
 };

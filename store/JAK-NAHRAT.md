@@ -5,7 +5,7 @@ Všechny podklady jsou v této složce `store/`:
 | Co | Soubor |
 | --- | --- |
 | Texty (název, popis, klíčová slova…) v 10 jazycích | `texty-do-obchodu.md` |
-| Snímky iPhone 6,9" (1320×2868) | `screenshots/iphone-6.9/cs` a `/en` |
+| Snímky iPhone 6,3" (1206×2622) | `screenshots/iphone-6.3/cs` a `/en` |
 | Snímky iPad 13" (2064×2752) | `screenshots/ipad-13/cs` a `/en` |
 | Snímky Android (1080×2160) | `screenshots/android/cs` a `/en` |
 | Google Play ikona 512×512 | `graphics/google-play-ikona-512.png` |
@@ -46,7 +46,7 @@ Privacy Policy URL: https://lamatlama.github.io/terky-spider/privacy/
 - Price: nejbližší hladina k 250 Kč
 - Localization (cs): Display Name `Plná verze`, Description `Neomezené hraní navždy`
   (en: `Full version`, `Unlimited play forever`)
-- Review screenshot: `screenshots/iphone-6.9/cs/05-nastaveni.png` nebo snímek obrazovky s nabídkou
+- Review screenshot: `screenshots/iphone-6.3/cs/05-nastaveni.png` nebo snímek obrazovky s nabídkou
 - Při odeslání první verze ke schválení nákup u verze zaškrtni.
 
 **Verze 1.0**: snímky, Promotional Text, Description, Keywords z `texty-do-obchodu.md`,

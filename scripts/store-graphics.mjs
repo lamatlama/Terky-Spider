@@ -54,3 +54,24 @@ for (const [lang, t] of Object.entries(TEXT)) {
   await sharp(Buffer.from(svg)).png().toFile(`${OUT}/google-play-banner-${lang}.png`);
 }
 console.log(`grafika hotová → ${OUT}/ (${(await readFile(`${OUT}/google-play-banner-cs.png`)).length >> 10} kB banner)`);
+
+// App Store: velký obrázek nahoře na stránce hry (Product Page → Header), 3840×1646.
+// Apple ho podle otočení telefonu ořízne po stranách, proto je vše důležité uprostřed.
+for (const [lang, t] of Object.entries(TEXT)) {
+  const W = 3840;
+  const H = 1646;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+    <defs><radialGradient id="g" cx="50%" cy="42%" r="70%">
+      <stop offset="0" stop-color="#1c9254"/><stop offset="1" stop-color="#0b552e"/></radialGradient></defs>
+    <rect width="${W}" height="${H}" fill="url(#g)"/>
+    <g transform="translate(${W / 2} 600) scale(2.6) translate(-790 -255)">
+      ${card(690, 265, -16, back)}
+      ${card(790, 245, -2, king)}
+      ${card(890, 262, 13, photoCard)}
+    </g>
+    <text x="${W / 2}" y="1310" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="800" font-size="190" fill="#fff">Terky Spider</text>
+    <text x="${W / 2}" y="1460" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="92" fill="#fff" opacity=".92">${t.line1} <tspan fill="#ffd54f">${t.line2}</tspan></text>
+  </svg>`;
+  await sharp(Buffer.from(svg)).png().toFile(`${OUT}/app-store-header-${lang}.png`);
+}
+console.log('App Store header hotový');
