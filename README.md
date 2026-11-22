@@ -135,6 +135,17 @@ Potřebuješ: Mac s Xcode (je), členství v
 Verze se mění v Xcode (Version = `1.0`, Build = `1`); build musí být při
 každém nahrání vyšší.
 
+**Když nahrání skončí „Invalid Signature. Code failed to satisfy specified
+code requirement(s)“:** příčinou je diakritika ve jméně v certifikátu
+(„Vitásková“). Při podpisu na serverech Apple („cloud signing“) se „á“ zapíše
+jinak než v certifikátu. V Macu proto musí být vlastní certifikát
+**Apple Distribution** (Xcode → Settings → Apple Accounts → Manage Certificates
+→ + → Apple Distribution, založen 22. 11. 2026, platí do 22. 11. 2027) – pak se
+podepisuje lokálně a vše projde. Po vypršení certifikátu je potřeba vytvořit nový.
+
+**Xcode:** od dubna 2027 musí být aplikace sestavené v Xcode 27 nebo novějším
+(iOS 27 SDK). Před další aktualizací po tomto datu aktualizuj Xcode.
+
 **Upozornění k „Už stačilo“:** Apple v pravidlech pro vzhled aplikací
 (Human Interface Guidelines) říká, že se aplikace nemá zavírat sama. Při
 schvalování to může vrátit. Pak stačí v `src/main.js` ve funkci `quit()`
